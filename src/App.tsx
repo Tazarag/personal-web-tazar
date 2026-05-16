@@ -243,7 +243,7 @@ const Hero = ({ lang }: { lang: Language }) => {
       >
         <div className="relative inline-block">
           <img
-            src="aset/profilpic.jpg"
+            src="/aset/profilpic.JPG"
             alt="Tazar Al Ghaffar"
             className="w-48 h-48 md:w-52 md:h-52 rounded-3xl object-cover shadow-2xl border-4 border-white transform rotate-3"
           />
@@ -451,7 +451,7 @@ const Portfolio = ({ lang }: { lang: Language }) => {
                   {proj.category}
                 </div>
                 <img
-                  src={idx === 0 ? 'aset/fotoweb.png' : idx === 1 ? 'aset/mobile.png' : idx === 2 ? 'aset/thumb1.png' : ''}
+                  src={idx === 0 ? '/aset/fotoweb.png' : idx === 1 ? '/aset/mobile.png' : idx === 2 ? '/aset/thumb1.png' : ''}
                   alt={proj.title}
                   className="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700"
                 />
@@ -589,13 +589,13 @@ const Footer = ({ lang }: { lang: Language }) => {
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           <div className="h-48 rounded-2xl overflow-hidden bg-neutral-100 hover:ring-4 hover:ring-indigo-100 transition-all cursor-pointer">
-            <img src="aset/footer1.jpg" className="w-full h-full object-cover object-[center_30%] opacity-80" alt="Project space 1" />
+            <img src="/aset/footer1.jpg" className="w-full h-full object-cover object-[center_30%] opacity-80" alt="Project space 1" />
           </div>
           <div className="h-48 rounded-2xl overflow-hidden bg-neutral-100 hover:ring-4 hover:ring-indigo-100 transition-all cursor-pointer">
-            <img src="aset/footer3.jpg" className="w-full h-full object-cover object-[center_60%] opacity-80" alt="Project space 2" />
+            <img src="/aset/footer3.JPG" className="w-full h-full object-cover object-[center_60%] opacity-80" alt="Project space 2" />
           </div>
           <div className="h-48 rounded-2xl overflow-hidden bg-neutral-100 hover:ring-4 hover:ring-indigo-100 transition-all cursor-pointer">
-            <img src="aset/footer2.jpg" className="w-full h-full object-cover object-[center_70%] opacity-80" alt="Project space 3" />
+            <img src="/aset/footer2.jpg" className="w-full h-full object-cover object-[center_70%] opacity-80" alt="Project space 3" />
           </div>
         </div>
 
