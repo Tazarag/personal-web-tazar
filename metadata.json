@@ -1,0 +1,8 @@
+{
+  "name": "Tazar Al Ghaffar Portfolio",
+  "description": "A professional and modern personal portfolio website for Tazar Al Ghaffar, featuring education, work experience, projects, and videography expertise.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  
+  --color-brand-primary: #1a1a1a;
+  --color-brand-accent: #6366f1;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-[#FFF3D7] text-neutral-900 transition-colors duration-300 antialiased;
+  }
+}
+
+@layer components {
+  .glass-nav {
+    @apply sticky top-0 z-50 border-b border-neutral-200 bg-white/70 backdrop-blur-md transition-colors duration-300;
+  }
+  
+  .section-padding {
+    @apply py-20 px-6 sm:px-12 lg:px-24;
+  }
+
+  .glitch-text {
+    position: relative;
+    display: inline-block;
+  }
+
+  .glitch-text:hover {
+    animation: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
+  }
+
+  .glitch-text::before,
+  .glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    pointer-events: none;
+    display: none;
+  }
+
+  .glitch-text:hover::before {
+    display: block;
+    animation: glitch-anim 0.2s cubic-bezier(.25, .46, .45, .94) both infinite;
+    color: #fde047;
+    z-index: -1;
+    text-shadow: 2px 0 #facc15;
+  }
+
+  .glitch-text:hover::after {
+    display: block;
+    animation: glitch-anim 0.2s cubic-bezier(.25, .46, .45, .94) reverse both infinite;
+    color: #eab308;
+    z-index: -2;
+    text-shadow: -2px 0 #ca8a04;
+  }
+
+  @keyframes glitch {
+    0% { transform: translate(0); }
+    10% { transform: translate(-3px, 1px) skewX(2deg); }
+    20% { transform: translate(-3px, -1px) skewX(-2deg); }
+    30% { transform: translate(3px, 1px) skewX(1deg); }
+    40% { transform: translate(3px, -1px) skewX(-1deg); }
+    50% { transform: translate(-1px, 2px) skewX(0deg); }
+    100% { transform: translate(0); }
+  }
+
+  @keyframes glitch-anim {
+    0% { clip-path: inset(50% 0 30% 0); transform: translate(-10px); }
+    20% { clip-path: inset(10% 0 80% 0); transform: translate(10px); }
+    40% { clip-path: inset(40% 0 40% 0); transform: translate(-8px); }
+    60% { clip-path: inset(80% 0 10% 0); transform: translate(8px); }
+    80% { clip-path: inset(20% 0 60% 0); transform: translate(-10px); }
+    100% { clip-path: inset(50% 0 30% 0); transform: translate(0); }
+  }
+}
